@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+/* Agregar la animación personalizada */
+@layer utilities {
+  .slide-horizontal {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .translate-x-full {
+    transform: translateX(100%);
+  }
+
+  .translate-x-0 {
+    transform: translateX(0);
+  }
+
+  /* Opcional: para un retraso suave entre pasos */
+  .delay-500 {
+    transition-delay: 0.5s;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: transparent !important;
+  color: #333 !important; 
+  -webkit-text-fill-color: #333 !important; 
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Personalizar la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color de fondo de la pista */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1d5ab4; /* Color de la parte deslizante */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #134288; /* Color cuando el cursor pasa por encima */
+}
