@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:7137/api";
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Función para iniciar sesión y almacenar el token con expiración
 export async function loginRequest(correo: string, contrasena: string) {
