@@ -7,7 +7,7 @@ export function DynamicIcon({ iconName, className }: { iconName: string; classNa
     const [Icon, setIcon] = useState<LucideIcon | null>(null);
   
     useEffect(() => {
-      import("lucide-react").then((module) => {
+        import(`lucide-react/dist/esm/icons/${iconName}.js`).then((module) => {
         const iconsMap = module as unknown as Record<string, LucideIcon>;
         setIcon(() => iconsMap[iconName] || iconsMap["Dot"]); // Icono por defecto
       });

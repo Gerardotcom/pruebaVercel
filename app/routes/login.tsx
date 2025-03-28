@@ -94,7 +94,7 @@ export default function Login() {
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-3 top-3 text-gray-500 hover:text-primary transition-all"
           >
-            {showPassword ? <DynamicIcon iconName="EyeOff" className="w-5 h-5" />  : <DynamicIcon iconName="Eye" className="w-5 h-5" />}
+            {showPassword ? <DynamicIcon iconName="EyeOff" className="w-5 h-5 text-gray-500" />  : <DynamicIcon iconName="Eye" className="w-5 h-5 text-gray-500" />}
           </button>
         </div>
 
