@@ -1,6 +1,5 @@
 import { useState } from "react";
 import withAuth from "~/utils/apiLogin/auth";
-import { LucideIcon, Home, SquareStack, TicketCheck, UserSearch, Wrench, Power, Settings, Menu, Search, ChevronDown, ChevronUp, } from "lucide-react";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import RecentTickets from "~/components/dashboard/ticketsrecientes";

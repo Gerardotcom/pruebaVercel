@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { obtenerTickets, getMantenimientos } from "~/utils/apiDasboard/statsDashboard";
 import { Ticket } from "~/utils/apiTickets/ticket";
-import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type RecentTicketsProps = {
   search: string;

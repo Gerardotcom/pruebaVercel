@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Plus, X, Pencil, Trash2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus, Pencil, Trash2 } from "lucide-react";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import CrearAssetModal from "~/components/assets/crearAssetModal";

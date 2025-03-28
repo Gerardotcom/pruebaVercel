@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import withAuth from "~/utils/apiLogin/auth";
-import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Files, Plus, X, Pencil, Trash2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus, X, Pencil } from "lucide-react";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import { Ticket } from "~/utils/apiTickets/ticket";
 import { EditTicketModal } from "~/components/ticket/editTicket";
 import { getTickets } from "~/utils/apiTickets/ticketsGet";
 import { crearTicket } from "~/utils/apiTickets/apiCrearTicket";
-import { asignarTecnico } from "~/utils/apiTickets/asignarTecnico";
 import { cambiarEstado } from "~/utils/apiTickets/estadosTicket";
 
 

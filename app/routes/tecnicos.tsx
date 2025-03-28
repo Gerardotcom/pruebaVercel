@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import withAuth from "~/utils/apiLogin/auth";
-import { Search, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Files, X, Pencil, Trash2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Files, X, Pencil, Trash2 } from "lucide-react";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import { Tecnico } from "~/utils/apiTecnicos/tecnico";
