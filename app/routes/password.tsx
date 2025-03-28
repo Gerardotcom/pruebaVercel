@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "@remix-run/react";
-import { Eye, EyeOff } from "lucide-react";
 import { resetPasswordRequest } from "~/utils/apiLogin/authApi";
+import { DynamicIcon } from "~/components/dynamicIcons";
+
 
 export default function Password() {
   const [formData, setFormData] = useState({ newPassword: "", confirmPassword: "" });
@@ -108,7 +109,7 @@ export default function Password() {
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-3 top-3 text-gray-500 hover:text-[#0047BA] transition-all"
           >
-            {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            {showPassword ? <DynamicIcon iconName="EyeOff" className="w-5 h-5" />  : <DynamicIcon iconName="Eye" className="w-5 h-5" />}
           </button>
           {errors.newPassword && <p className="text-red-500 text-xs mt-1">{errors.newPassword}</p>}
         </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react"; // Asegúrate de tener este icono disponible
+import { DynamicIcon } from "../dynamicIcons";
 import { assetValidations } from "~/utils/apiAssets/validations";
 
 interface CrearAssetModalProps {
@@ -58,7 +58,7 @@ const CrearAssetModal: React.FC<CrearAssetModalProps> = ({ isVisible, onClose, o
         <div className="flex justify-between items-center border-b pb-2 mb-4">
           <h3 className="text-xl font-semibold text-black">Agregar asset</h3>
           <button onClick={onClose} className="text-gray-600 hover:text-gray-900">
-            <X className="w-5 h-5" />
+            <DynamicIcon iconName="X" className="w-5 h-5" />
           </button>
         </div>
         <form onSubmit={handleSubmit}>

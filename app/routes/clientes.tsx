@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import withAuth from "~/utils/apiLogin/auth";
-import { ChevronLeft, ChevronRight, Files, X, Pencil, Trash2 } from "lucide-react";
+import { DynamicIcon } from "~/components/dynamicIcons";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import { Cliente } from "~/utils/apiClientes/cliente";
@@ -207,7 +207,7 @@ function ClientesLayout() {
                             className="text-gray-500 hover:text-gray-800"
                             onClick={() => copyToClipboard(Cliente.correo)}
                           >
-                            <Files className="w-5 h-5" />
+                            <DynamicIcon iconName="Files" className="w-5 h-5" />
                           </button>
                         </div>
                       </td>
@@ -221,14 +221,14 @@ function ClientesLayout() {
                           onClick={() => setSelectedCliente(Cliente)}
                           className="text-blue-500 hover:text-blue-700 mr-3"
                         >
-                          <Pencil className="w-5 h-5" />
+                          <DynamicIcon iconName="Pencil" className="w-5 h-5" />
                         </button>
                         {/* Botón para eliminar técnico */}
                         <button
                           onClick={() => handleDeleteCliente(Cliente.idCliente, Cliente.nombreCliente, Cliente.totalActivos)}
                           className="text-red-500 hover:text-red-700"
                         >
-                          <Trash2 className="w-5 h-5" />
+                          <DynamicIcon iconName="Trash2" className="w-5 h-5" />
                         </button>
                       </td>
                     </tr>
@@ -244,7 +244,7 @@ function ClientesLayout() {
                 disabled={currentPage === 1}
                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <DynamicIcon iconName="ChevronLeft" className="w-5 h-5" />
               </button>
               {renderPaginationButtons()}
               <button
@@ -252,7 +252,7 @@ function ClientesLayout() {
                 disabled={currentPage === totalPages}
                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
               >
-                <ChevronRight className="w-5 h-5" />
+                <DynamicIcon iconName="ChevronRight" className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -268,7 +268,7 @@ function ClientesLayout() {
                   onClick={() => setSelectedCliente(null)}
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  <X className="w-5 h-5" />
+                  <DynamicIcon iconName="X" className="w-5 h-5" />
                 </button>
               </div>
               <form

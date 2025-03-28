@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import withAuth from "~/utils/apiLogin/auth";
-import { ChevronLeft, ChevronRight, Plus, X, Pencil } from "lucide-react";
+import { DynamicIcon } from "~/components/dynamicIcons";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import { Ticket } from "~/utils/apiTickets/ticket";
@@ -138,7 +138,7 @@ function TicketsLayout() {
                                             className="h-10 w-10 flex items-center bg-primary text-black p-2 rounded-full space-x-2"
                                             onClick={() => setIsAddingTicket(true)}
                                         >
-                                            <Plus className="w-6 h-5 text-white" />
+                                            <DynamicIcon iconName="Plus" className="w-6 h-5 text-white" />
                                         </button>
                                     </div>
                                 </div>
@@ -217,7 +217,7 @@ function TicketsLayout() {
                                                     onClick={() => setSelectedTicket(ticket)}
                                                     className="text-blue-500 hover:text-blue-700"
                                                 >
-                                                    <Pencil className="w-5 h-5" />
+                                                    <DynamicIcon iconName="Pencil" className="w-5 h-5" />
                                                 </button>
                                             </td>
                                         </tr>
@@ -234,7 +234,7 @@ function TicketsLayout() {
                                 disabled={currentPage === 1}
                                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
                             >
-                                <ChevronLeft className="w-5 h-5" />
+                                <DynamicIcon iconName="ChevronLeft" className="w-5 h-5" />
                             </button>
 
                             {/* Botones de paginación numéricos */}
@@ -246,7 +246,7 @@ function TicketsLayout() {
                                 disabled={currentPage === totalPages}
                                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
                             >
-                                <ChevronRight className="w-5 h-5" />
+                                <DynamicIcon iconName="ChevronRight" className="w-5 h-5" />
                             </button>
                         </div>
                     </div>
@@ -267,7 +267,7 @@ function TicketsLayout() {
                                     }}
                                     className="text-gray-600 hover:text-gray-900"
                                 >
-                                    <X className="w-5 h-5" />
+                                    <DynamicIcon iconName="X" className="w-5 h-5" />
                                 </button>
                             </div>
                             <form

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import withAuth from "~/utils/apiLogin/auth";
-import { Edit, Save } from "lucide-react";
+import { DynamicIcon } from "~/components/dynamicIcons";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import { obtenerPerfil, actualizarPerfil, PerfilDatos } from "~/utils/apiPerfil/profileApi";
@@ -88,7 +88,7 @@ function EditProfile() {
                       readOnly={!isEditing[field as keyof PerfilDatos]}
                     />
                     <button type="button" onClick={() => handleEdit(field as keyof PerfilDatos)} className="ml-2 p-2 text-gray-600 hover:text-blue-500">
-                      {isEditing[field as keyof PerfilDatos] ? <Save className="w-5 h-5" /> : <Edit className="w-5 h-5" />}
+                      {isEditing[field as keyof PerfilDatos] ? <DynamicIcon iconName="Save" className="w-6 h-6" /> : <DynamicIcon iconName="Edit" className="w-6 h-6" /> }
                     </button>
                   </div>
                 </div>

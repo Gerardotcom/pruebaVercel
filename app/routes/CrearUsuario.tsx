@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import { DynamicIcon } from "~/components/dynamicIcons";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import { Form, useActionData } from "@remix-run/react";
@@ -202,7 +202,7 @@ export default function UsuariosAdmin() {
                                             className="absolute right-3 top-5 text-gray-600"
                                             onClick={() => setShowPassword(!showPassword)}
                                         >
-                                            {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                                            {showPassword ? <DynamicIcon iconName="EyeOff" className="w-5 h-5" />  : <DynamicIcon iconName="Eye" className="w-5 h-5" />}
                                         </button>
                                     </div>
                                     {errors.contrasena && <p className="text-red-500 text-sm mt-1">{errors.contrasena}</p>}

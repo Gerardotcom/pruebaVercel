@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { obtenerTickets, getMantenimientos } from "~/utils/apiDasboard/statsDashboard";
 import { Ticket } from "~/utils/apiTickets/ticket";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { DynamicIcon } from "../dynamicIcons";
 
 type RecentTicketsProps = {
   search: string;
@@ -133,7 +134,7 @@ const RecentTickets = ({
           disabled={currentPage === 1}
           className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <DynamicIcon iconName="ChevronLeft" className="w-6 h-6" />
         </button>
 
         {renderPaginationButtons()}
@@ -143,7 +144,7 @@ const RecentTickets = ({
           disabled={currentPage === totalPages}
           className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
         >
-          <ChevronRight className="w-5 h-5" />
+          <DynamicIcon iconName="ChevronRight" className="w-6 h-6" />
         </button>
       </div>
     </div>

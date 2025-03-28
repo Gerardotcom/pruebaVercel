@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getEstados } from '~/utils/apiDasboard/statsDashboard';
-import { TicketCheck, ChevronRight } from "lucide-react";
 import { Link } from "@remix-run/react";
+import { DynamicIcon } from "../dynamicIcons";
 
 const TicketDashboard = () => {
     const [ticketCounts, setTicketCounts] = useState({
@@ -52,10 +52,10 @@ const TicketDashboard = () => {
             </div>
             <Link to="/Tickets" className="w-full flex justify-between bg-blue-700 text-white p-3 rounded-xl">
                 <div className="flex">
-                    <TicketCheck className="w-6 h-6 mr-3" />
+                <DynamicIcon iconName="TicketCheck" className="w-6 h-6" />
                     <span>Tickets</span>
                 </div>
-                <ChevronRight className="w-6 h-6" />
+                <DynamicIcon iconName="ChevronRight" className="w-6 h-6" />
             </Link>
         </div>
     );

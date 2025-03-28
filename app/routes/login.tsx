@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "@remix-run/react";
 import { loginRequest } from "~/utils/apiLogin/authApi";
-import { Eye, EyeOff } from "lucide-react";
+import { DynamicIcon } from "~/components/dynamicIcons";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -93,7 +94,7 @@ export default function Login() {
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-3 top-3 text-gray-500 hover:text-primary transition-all"
           >
-            {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            {showPassword ? <DynamicIcon iconName="EyeOff" className="w-5 h-5" />  : <DynamicIcon iconName="Eye" className="w-5 h-5" />}
           </button>
         </div>
 

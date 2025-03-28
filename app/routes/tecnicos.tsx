@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import withAuth from "~/utils/apiLogin/auth";
-import { ChevronLeft, ChevronRight, Files, X, Pencil, Trash2 } from "lucide-react";
+import { DynamicIcon } from "~/components/dynamicIcons";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import { Tecnico } from "~/utils/apiTecnicos/tecnico";
@@ -234,7 +234,7 @@ function TecnicosLayout() {
                             className="text-gray-500 hover:text-gray-700"
                             onClick={() => copyToClipboard(tecnico.correo)}
                           >
-                            <Files className="w-5 h-5" />
+                            <DynamicIcon iconName="Files" className="w-5 h-5" />
                           </button>
                         </div>
                       </td>
@@ -264,14 +264,14 @@ function TecnicosLayout() {
                           onClick={() => setSelectedTecnico(tecnico)}
                           className="text-blue-500 hover:text-blue-700 mr-3"
                         >
-                          <Pencil className="w-5 h-5" />
+                          <DynamicIcon iconName="Pencil" className="w-5 h-5" />
                         </button>
                         {/* Botón para eliminar técnico */}
                         <button
                           onClick={() => handleDelete(tecnico.idTecnico, tecnico.nombreTecnico, tecnico.ticketsAsignados)}
                           className="text-red-500 hover:text-red-700"
                         >
-                          <Trash2 className="w-5 h-5" />
+                          <DynamicIcon iconName="Trash2" className="w-5 h-5" />
                         </button>
                       </td>
                     </tr>
@@ -287,7 +287,7 @@ function TecnicosLayout() {
                 disabled={currentPage === 1}
                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <DynamicIcon iconName="ChevronLeft" className="w-5 h-5" />
               </button>
               {renderPaginationButtons()}
               <button
@@ -295,7 +295,7 @@ function TecnicosLayout() {
                 disabled={currentPage === totalPages}
                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
               >
-                <ChevronRight className="w-5 h-5" />
+                <DynamicIcon iconName="ChevronRight" className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -311,7 +311,7 @@ function TecnicosLayout() {
                   onClick={() => setSelectedTecnico(null)}
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  <X className="w-5 h-5" />
+                  <DynamicIcon iconName="X" className="w-5 h-5" />
                 </button>
               </div>
               <form

@@ -21,12 +21,6 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
-  build: {
-    minify: 'terser',  // Minificar con Terser
-    rollupOptions: {
-      treeshake: true,  // Activar tree-shaking para eliminar código no usado
-    },
-  },
   optimizeDeps: {
     include: ['lucide-react'],  // Asegurarte de que lucide-react esté optimizado
   },

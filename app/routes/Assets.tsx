@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Plus, Pencil, Trash2 } from "lucide-react";
+import { DynamicIcon } from "~/components/dynamicIcons";
 import { Sidebar } from "~/components/sidebar";
 import { Navbar } from "~/components/navbar";
 import CrearAssetModal from "~/components/assets/crearAssetModal";
@@ -261,10 +261,10 @@ function AssetsLayout() {
                                 <div className="flex space-x-4">
                                     {/* Botón para agregar un nuevo Asset */}
                                     <button
-                                        className="h-10 w-10 flex items-center bg-[#0047BA] text-black p-2 rounded-full space-x-2"
+                                        className="h-10 w-10 flex items-center bg-[#0047BA] text-white p-2 rounded-full space-x-2"
                                         onClick={() => setIsAddingAsset(true)}
                                     >
-                                        <Plus className="w-6 h-5 text-white" />
+                                        <DynamicIcon iconName="Plus" className="w-6 h-5" />
                                     </button>
                                 </div>
                             </div>
@@ -348,10 +348,9 @@ function AssetsLayout() {
                                                         onClick={() => setSelectedAsset(asset)}
                                                         className="text-blue-500 hover:text-blue-700 mr-3"
                                                     >
-                                                        <Pencil className="w-5 h-5" />
-                                                    </button>
+                                                        <DynamicIcon iconName="Pencil" className="w-5 h-5" />                                                    </button>
                                                     <button onClick={() => handleDeleteAssetClick(asset)} className="text-red-500 hover:text-red-700">
-                                                        <Trash2 className="w-5 h-5" />
+                                                        <DynamicIcon iconName="Trash2" className="w-5 h-5" />
                                                     </button>
                                                 </td>
                                             </tr>
@@ -368,7 +367,7 @@ function AssetsLayout() {
                                 disabled={currentPage === 1}
                                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
                             >
-                                <ChevronLeft className="w-5 h-5" />
+                                <DynamicIcon iconName="ChevronLeft" className="w-5 h-5" />
                             </button>
                             {renderPaginationButtons()}
                             <button
@@ -376,7 +375,7 @@ function AssetsLayout() {
                                 disabled={currentPage === totalPages}
                                 className="px-3 py-1 bg-gray-200 text-black rounded disabled:opacity-50"
                             >
-                                <ChevronRight className="w-5 h-5" />
+                                <DynamicIcon iconName="ChevronRight" className="w-5 h-5" />
                             </button>
                         </div>
                     </div>

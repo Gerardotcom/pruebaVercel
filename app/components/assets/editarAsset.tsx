@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { X } from "lucide-react"; // Asegúrate de tener este icono disponible
+import { DynamicIcon } from "../dynamicIcons";
 import { assetValidations } from "~/utils/apiAssets/validations";
 
 const EditarAssetModal = ({ asset, isVisible, onClose, onSubmit }: any) => {
@@ -15,15 +15,15 @@ const EditarAssetModal = ({ asset, isVisible, onClose, onSubmit }: any) => {
 
     if (!isVisible) return null;
 
-    const handleInputChange = (setter: React.Dispatch<React.SetStateAction<string>>, field: string) => 
+    const handleInputChange = (setter: React.Dispatch<React.SetStateAction<string>>, field: string) =>
         (e: React.ChangeEvent<HTMLInputElement>) => {
             const { value } = e.target;
             const maxLength = assetValidations[field as keyof typeof assetValidations]?.maxLength || 100;
-    
+
             if (value.length <= maxLength) {
                 setter(value);
             }
-        };    
+        };
 
     return (
         <div className="fixed inset-0 bg-slate-800 bg-opacity-50 flex justify-center items-center z-50">
@@ -31,7 +31,7 @@ const EditarAssetModal = ({ asset, isVisible, onClose, onSubmit }: any) => {
                 <div className="flex justify-between items-center border-b pb-2 my-2">
                     <h2 className="align-middle text-xl font-semibold text-black">Editar Asset</h2>
                     <button onClick={onClose} className="text-gray-600 hover:text-gray-900">
-                        <X className="w-5 h-5" />
+                        <DynamicIcon iconName="X" className="w-6 h-6" />
                     </button>
                 </div>
 
