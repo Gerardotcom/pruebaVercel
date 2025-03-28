@@ -21,4 +21,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  optimizeDeps: {
+    include: ["lucide-react"],
+  },
 });
